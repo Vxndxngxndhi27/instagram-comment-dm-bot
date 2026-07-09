@@ -52,7 +52,7 @@ app.post("/webhook", async (req, res) => {
           console.log(comment.from.username);
 
           await sendInstagramDM(
-            comment.from.id,
+            comment.id,
             reply
           );
         }
