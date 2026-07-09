@@ -17,12 +17,11 @@ app.get("/webhook", (req, res) => {
 
   res.sendStatus(403);
 });
-
 app.post("/webhook", (req, res) => {
-  console.log(req.body);
+  console.log("WEBHOOK RECEIVED");
+  console.log(JSON.stringify(req.body, null, 2));
   res.sendStatus(200);
 });
-
 app.listen(process.env.PORT || 3000, () => {
   console.log("Server Started");
 });
